@@ -33,8 +33,8 @@ public class TransparentObject : MonoBehaviour
 
     private void FadeOut()
     {
-        Debug.Log("Fade out");
-        Color targetColor = originalColor;
+        
+        Color targetColor = material.color;
         targetColor.a = Mathf.Lerp(targetColor.a, 0.1f, fadeSpeed * Time.deltaTime);
         material.color = targetColor;
         GetComponent<Renderer>().material.color = material.color;
