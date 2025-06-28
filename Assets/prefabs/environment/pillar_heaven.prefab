@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b9ef7238821e1894ebf0d3a0d2ef64eb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b9ef7238821e1894ebf0d3a0d2ef64eb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 49a5719ada7df5f4da0c07856819ae92, type: 2}
     - target: {fileID: 919132149155446097, guid: b9ef7238821e1894ebf0d3a0d2ef64eb, type: 3}
       propertyPath: m_Name
-      value: pillar
+      value: pillar_heaven
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
