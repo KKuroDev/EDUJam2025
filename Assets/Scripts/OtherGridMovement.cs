@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class OtherGridMovement : MonoBehaviour
 {
@@ -71,6 +72,17 @@ public class OtherGridMovement : MonoBehaviour
             // TODO: IMPLEMENT STUMBLE MECHANIC
             yield break;
         }
+
+        Collider[] hitColliders = Physics.OverlapBox(endPosition, Vector3.one * 0.4f);
+        foreach (var hit in hitColliders)
+        {
+            if (hit.CompareTag("Angel"))
+            {
+                SceneManager.LoadScene("main_menu");
+                yield break;
+            }
+        }
+
         // Smoothly move in the desired direction taking the required time.
         float elapsedTime = 0;
         while (elapsedTime < moveDuration)
@@ -83,6 +95,16 @@ public class OtherGridMovement : MonoBehaviour
 
         // Make sure we end up exactly where we want.
         transform.position = endPosition;
+
+        Collider[] overlapNow = Physics.OverlapBox(transform.position, Vector3.one * 0.4f);
+        foreach (var hit in overlapNow)
+        {
+            if (hit.CompareTag("Angel"))
+            {
+                SceneManager.LoadScene("main_menu");
+                yield break;
+            }
+        }
 
         // We're no longer moving so we can accept another move input.
         isMoving = false;
