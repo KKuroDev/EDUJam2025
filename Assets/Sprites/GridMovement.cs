@@ -11,6 +11,7 @@ public class GridMovement : MonoBehaviour
     [SerializeField] private float gridSize = 1f;
 
     [SerializeField] private LayerMask obstacleLayer;
+    [SerializeField] private LayerMask obstacleStumbleLayer;
     private bool isMoving = false;
 
     // Update is called once per frame
@@ -62,9 +63,17 @@ public class GridMovement : MonoBehaviour
         Vector2 startPosition = transform.position;
         Vector2 endPosition = startPosition + (direction * gridSize);
 
+        // Check if obstacle is in Moved Direction
         if( Physics.CheckBox(endPosition, Vector3.one * 0.4f, Quaternion.identity, obstacleLayer))
         {
             isMoving = false;
+            yield break;
+        }
+        // Check if StumbleObstacle is in movement direction
+        if (Physics.CheckBox(endPosition, Vector3.one * 0.4f, Quaternion.identity, obstacleStumbleLayer))
+        {
+            isMoving = false;
+            // TODO: IMPLEMENT STUMBLE MECHANIC
             yield break;
         }
         // Smoothly move in the desired direction taking the required time.
