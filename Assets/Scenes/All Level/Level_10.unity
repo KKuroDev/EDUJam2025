@@ -3660,6 +3660,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7040737764348098227, guid: 2eac6b2526d0ea24e85e82e5171442bf, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040737764348098227, guid: 2eac6b2526d0ea24e85e82e5171442bf, type: 3}
+      propertyPath: obstacleStumbleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 8644674534706397906, guid: 2eac6b2526d0ea24e85e82e5171442bf, type: 3}
       propertyPath: m_Name
       value: Devil Same Variant

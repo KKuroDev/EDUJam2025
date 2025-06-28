@@ -3759,6 +3759,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5193797133331629269, guid: 6693e7563dbb252479ef978cb058291b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193797133331629269, guid: 6693e7563dbb252479ef978cb058291b, type: 3}
       propertyPath: devilPlayers.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -3766,6 +3770,10 @@ PrefabInstance:
       propertyPath: 'devilPlayers.Array.data[0]'
       value: 
       objectReference: {fileID: 422754763}
+    - target: {fileID: 5193797133331629269, guid: 6693e7563dbb252479ef978cb058291b, type: 3}
+      propertyPath: obstacleStumbleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5646613359239572343, guid: 6693e7563dbb252479ef978cb058291b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8
