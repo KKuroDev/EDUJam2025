@@ -26,7 +26,7 @@ public class TransparentObject : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Devil");
         float distance = Vector3.Distance(transform.position, player.transform.position);
 
-        return distance < 2.0f;
+        return (distance < 1.5f && transform.position.y < player.transform.position.y);
     }
 
     private void FadeOut()
