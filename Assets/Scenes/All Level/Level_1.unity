@@ -1282,6 +1282,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8057631153132305832, guid: c1c8a1efc906efa4496bcc6abccc107c, type: 3}
+      propertyPath: levelCompletePanel
+      value: 
+      objectReference: {fileID: 1987299223}
     - target: {fileID: 9217338160989156590, guid: c1c8a1efc906efa4496bcc6abccc107c, type: 3}
       propertyPath: m_Name
       value: LevelComplete
@@ -3071,6 +3075,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1083555409450460494, guid: 23d0ac0248e3c4647b58dedae724c96f, type: 3}
   m_PrefabInstance: {fileID: 1984249357}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1987299223 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3429383826900214073, guid: 6a5d9be23b58d8e4b980f2fbb6cc1437, type: 3}
+  m_PrefabInstance: {fileID: 363907272}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
