@@ -6,6 +6,7 @@ public class TransparentObject : MonoBehaviour
     private Material material;
     private bool isPlayerNear = false;
     private bool areAnyDevilsNear = false;
+    [SerializeField] private float transparencyValue = 0.1f;
 
     private void Start()
     {
@@ -29,7 +30,7 @@ public class TransparentObject : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Angel");
         float distance = Vector3.Distance(transform.position, player.transform.position);
 
-        return (distance < 1.5f && transform.position.y < player.transform.position.y);
+        return (distance < 2.5f && transform.position.y < player.transform.position.y);
     }
     
     private bool AreAnyDevilsNear()
@@ -40,7 +41,7 @@ public class TransparentObject : MonoBehaviour
         {
             float distance = Vector3.Distance(transform.position, devil.transform.position);
 
-            if (distance < 1.5f && transform.position.y < devil.transform.position.y)
+            if (distance < 2.5f && transform.position.y < devil.transform.position.y)
                 return true;
         }
 
@@ -51,7 +52,7 @@ public class TransparentObject : MonoBehaviour
     {
         
         Color targetColor = material.color;
-        targetColor.a = Mathf.Lerp(targetColor.a, 0.1f, fadeSpeed * Time.deltaTime);
+        targetColor.a = Mathf.Lerp(targetColor.a, transparencyValue, fadeSpeed * Time.deltaTime);
         material.color = targetColor;
         GetComponent<Renderer>().material.color = material.color;
     }
