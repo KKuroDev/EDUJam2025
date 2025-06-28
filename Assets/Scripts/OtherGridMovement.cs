@@ -38,13 +38,14 @@ public class OtherGridMovement : MonoBehaviour
                 inputFunction = Input.GetKeyDown;
             }
 
-            if (inputFunction(KeyCode.UpArrow))
+            // Richtung bestimmen und ggf. spiegeln
+            if (inputFunction(KeyCode.UpArrow) || inputFunction(KeyCode.W))
                 StartCoroutine(Move(mirrorMovement ? Vector2.down : Vector2.up));
-            else if (inputFunction(KeyCode.DownArrow))
+            else if (inputFunction(KeyCode.DownArrow) || inputFunction(KeyCode.S))
                 StartCoroutine(Move(mirrorMovement ? Vector2.up : Vector2.down));
-            else if (inputFunction(KeyCode.LeftArrow))
+            else if (inputFunction(KeyCode.LeftArrow) || inputFunction(KeyCode.A))
                 StartCoroutine(Move(mirrorMovement ? Vector2.right : Vector2.left));
-            else if (inputFunction(KeyCode.RightArrow))
+            else if (inputFunction(KeyCode.RightArrow) || inputFunction(KeyCode.D))
                 StartCoroutine(Move(mirrorMovement ? Vector2.left : Vector2.right));
         }
     }
