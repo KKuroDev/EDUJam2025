@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class GridMovement : MonoBehaviour
+public class OtherGridMovement : MonoBehaviour
 {
     // Allows you to hold down a key for movement.
     [SerializeField] private bool isRepeatedMovement = false;
@@ -11,6 +11,11 @@ public class GridMovement : MonoBehaviour
     [SerializeField] private float gridSize = 1f;
 
     [SerializeField] private LayerMask obstacleLayer;
+    [SerializeField] private LayerMask obstacleStumbleLayer;
+
+    [Header("Devil Mirror Movement")]
+    public bool mirrorMovement = false;
+
     private bool isMoving = false;
 
     // Update is called once per frame
@@ -32,23 +37,14 @@ public class GridMovement : MonoBehaviour
                 inputFunction = Input.GetKeyDown;
             }
 
-            // If the input function is active, move in the appropriate direction.
             if (inputFunction(KeyCode.UpArrow))
-            {
-                StartCoroutine(Move(Vector2.up));
-            }
+                StartCoroutine(Move(mirrorMovement ? Vector2.down : Vector2.up));
             else if (inputFunction(KeyCode.DownArrow))
-            {
-                StartCoroutine(Move(Vector2.down));
-            }
+                StartCoroutine(Move(mirrorMovement ? Vector2.up : Vector2.down));
             else if (inputFunction(KeyCode.LeftArrow))
-            {
-                StartCoroutine(Move(Vector2.left));
-            }
+                StartCoroutine(Move(mirrorMovement ? Vector2.right : Vector2.left));
             else if (inputFunction(KeyCode.RightArrow))
-            {
-                StartCoroutine(Move(Vector2.right));
-            }
+                StartCoroutine(Move(mirrorMovement ? Vector2.left : Vector2.right));
         }
     }
 
@@ -62,9 +58,17 @@ public class GridMovement : MonoBehaviour
         Vector2 startPosition = transform.position;
         Vector2 endPosition = startPosition + (direction * gridSize);
 
-        if( Physics.CheckBox(endPosition, Vector3.one * 0.4f, Quaternion.identity, obstacleLayer))
+        // Check if obstacle is in Moved Direction
+        if (Physics.CheckBox(endPosition, Vector3.one * 0.4f, Quaternion.identity, obstacleLayer))
         {
             isMoving = false;
+            yield break;
+        }
+        // Check if StumbleObstacle is in movement direction
+        if (Physics.CheckBox(endPosition, Vector3.one * 0.4f, Quaternion.identity, obstacleStumbleLayer))
+        {
+            isMoving = false;
+            // TODO: IMPLEMENT STUMBLE MECHANIC
             yield break;
         }
         // Smoothly move in the desired direction taking the required time.
