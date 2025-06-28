@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class OtherGridMovement : MonoBehaviour
 {
+    
+
     // Allows you to hold down a key for movement.
     [SerializeField] private bool isRepeatedMovement = false;
     // Time in seconds to move between one grid position and the next.
@@ -22,6 +24,7 @@ public class OtherGridMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        
         // Only process on move at a time.
         if (!isMoving)
         {
@@ -39,19 +42,24 @@ public class OtherGridMovement : MonoBehaviour
             }
 
             if (inputFunction(KeyCode.UpArrow) || inputFunction(KeyCode.W))
-                StartCoroutine(Move(mirrorMovement ? Vector2.down : Vector2.up));
+                Invoke("MoveUp", 0.0001f);
             else if (inputFunction(KeyCode.DownArrow) || inputFunction(KeyCode.S))
-                StartCoroutine(Move(mirrorMovement ? Vector2.up : Vector2.down));
+                Invoke("MoveDown", 0.0001f);
             else if (inputFunction(KeyCode.LeftArrow) || inputFunction(KeyCode.A))
-                StartCoroutine(Move(mirrorMovement ? Vector2.right : Vector2.left));
+                Invoke("MoveLeft", 0.0001f);
             else if (inputFunction(KeyCode.RightArrow) || inputFunction(KeyCode.D))
-                StartCoroutine(Move(mirrorMovement ? Vector2.left : Vector2.right));
+                Invoke("MoveRight", 0.0001f);
         }
     }
 
     // Smooth movement between grid positions.
     private IEnumerator Move(Vector2 direction)
     {
+        if (cancelNextMove)
+        {
+            cancelNextMove = false;
+            yield break;
+        }
         // Record that we're moving so we don't accept more input.
         isMoving = true;
 
@@ -109,4 +117,32 @@ public class OtherGridMovement : MonoBehaviour
         // We're no longer moving so we can accept another move input.
         isMoving = false;
     }
+
+    public void CancelNextMove()
+    {
+        Debug.Log("Devil movement cancelled due to stumble.");
+
+        cancelNextMove = true;
+    }
+
+    public void MoveUp()
+    {
+        StartCoroutine(Move(mirrorMovement ? Vector2.down : Vector2.up));
+    }
+
+    public void MoveDown()
+    {
+        StartCoroutine(Move(mirrorMovement ? Vector2.up : Vector2.down));
+    }
+
+    public void MoveLeft()
+    {
+        StartCoroutine(Move(mirrorMovement ? Vector2.right : Vector2.left));
+    }
+
+    public void MoveRight()
+    {
+        StartCoroutine(Move(mirrorMovement ? Vector2.left : Vector2.right));
+    }
+    private bool cancelNextMove = false;
 }

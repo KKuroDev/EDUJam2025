@@ -150,15 +150,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af50146636ea246439e828a53b667a5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  devilPlayer: {fileID: 0}
   isRepeatedMovement: 0
   moveDuration: 0.1
   gridSize: 1
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 64
   obstacleStumbleLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
 --- !u!1001 &4654513982109492549
 PrefabInstance:
   m_ObjectHideFlags: 0
