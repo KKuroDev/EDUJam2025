@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 735570315}
+  tagToCompare: 
   IsActivated: 0
 --- !u!136 &35319315
 CapsuleCollider:
@@ -1374,6 +1375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 718551372}
   - component: {fileID: 718551373}
+  - component: {fileID: 718551374}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -1410,6 +1412,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3c16aac9c2da240a9325d207942bb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &718551374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718551371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed686a4a804a2504584f0fcda11ccca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionsCanvas: {fileID: 1746565617}
 --- !u!1 &735570314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1976,6 +1991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 385405302}
+  tagToCompare: 
   IsActivated: 0
 --- !u!136 &1179961538
 CapsuleCollider:
@@ -2586,7 +2602,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1746565617}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2654,7 +2670,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1746565618
 RectTransform:
   m_ObjectHideFlags: 0
