@@ -56,7 +56,7 @@ public class ObjectAction : MonoBehaviour
         if (action == ObjAction.OpenDoorUp)
         {
             // Simulate door opening by moving it upward over time.
-            transform.localPosition -= new Vector3(0, 1, 1) * doorMoveSpeed * Time.deltaTime;
+            transform.localPosition -= new Vector3(0, 1, 0) * doorMoveSpeed * Time.deltaTime;
         }
         else if (action == ObjAction.OpenDoorDown)
         {
