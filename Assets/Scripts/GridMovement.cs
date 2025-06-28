@@ -1,9 +1,10 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GridMovement : MonoBehaviour
 {
-    public OtherGridMovement devilPlayer;
+    public List<OtherGridMovement> devilPlayers = new List<OtherGridMovement>();
     // Allows you to hold down a key for movement.
     [SerializeField] private bool isRepeatedMovement = false;
     // Time in seconds to move between one grid position and the next.
@@ -77,14 +78,18 @@ public class GridMovement : MonoBehaviour
         if (Physics.CheckBox(endPosition, Vector3.one * 0.4f, Quaternion.identity, obstacleStumbleLayer))
         {
             isMoving = false;
-            if (devilPlayer != null)
-            {
-                Debug.Log("Test");
-                devilPlayer.CancelNextMove();
 
+            foreach (var devil in devilPlayers)
+            {
+                if (devil != null)
+                {
+                    devil.CancelNextMove();
+                }
             }
+
             yield break;
         }
+
         // Smoothly move in the desired direction taking the required time.
         float elapsedTime = 0;
         while (elapsedTime < moveDuration)
