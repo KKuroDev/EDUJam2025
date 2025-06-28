@@ -10,6 +10,7 @@ public class GridMovement : MonoBehaviour
     // The size of the grid
     [SerializeField] private float gridSize = 1f;
 
+    [SerializeField] private LayerMask obstacleLayer;
     private bool isMoving = false;
 
     // Update is called once per frame
@@ -61,6 +62,11 @@ public class GridMovement : MonoBehaviour
         Vector2 startPosition = transform.position;
         Vector2 endPosition = startPosition + (direction * gridSize);
 
+        if( Physics.CheckBox(endPosition, Vector3.one * 0.4f, Quaternion.identity, obstacleLayer))
+        {
+            isMoving = false;
+            yield break;
+        }
         // Smoothly move in the desired direction taking the required time.
         float elapsedTime = 0;
         while (elapsedTime < moveDuration)
