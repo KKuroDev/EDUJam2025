@@ -127,10 +127,10 @@ MonoBehaviour:
   gridSize: 1
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 64
   obstacleStumbleLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
   mirrorMovement: 1
 --- !u!1001 &3554174986873952130
 PrefabInstance:

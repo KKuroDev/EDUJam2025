@@ -1700,7 +1700,7 @@ PrefabInstance:
     - target: {fileID: 3018229789155159313, guid: b6e9cea802f582f419797df8226adde9, type: 3}
       propertyPath: levelCompletePanel
       value: 
-      objectReference: {fileID: 6563078767589435640}
+      objectReference: {fileID: 0}
     - target: {fileID: 3365444466915662642, guid: b6e9cea802f582f419797df8226adde9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.531559
@@ -3363,6 +3363,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883611096}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1905405416 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8322100598798899676, guid: 0ea8269de88d7434790670ac12f52a9a, type: 3}
+  m_PrefabInstance: {fileID: 7011342075055218826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8c423c8524d84e4fb3dbe2736693a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1908871462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3649,13 +3660,17 @@ PrefabInstance:
       value: AngelPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 5193797133331629269, guid: 6693e7563dbb252479ef978cb058291b, type: 3}
-      propertyPath: obstacleLayer.m_Bits
-      value: 8
+      propertyPath: devilPlayer
+      value: 
+      objectReference: {fileID: 1905405416}
+    - target: {fileID: 5193797133331629269, guid: 6693e7563dbb252479ef978cb058291b, type: 3}
+      propertyPath: devilPlayers.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5193797133331629269, guid: 6693e7563dbb252479ef978cb058291b, type: 3}
-      propertyPath: obstacleStumbleLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
+      propertyPath: 'devilPlayers.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1905405416}
     - target: {fileID: 5646613359239572343, guid: 6693e7563dbb252479ef978cb058291b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.011350587
@@ -3766,11 +3781,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a5d9be23b58d8e4b980f2fbb6cc1437, type: 3}
---- !u!1 &6563078767589435640 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8298159171315197579, guid: 6a5d9be23b58d8e4b980f2fbb6cc1437, type: 3}
-  m_PrefabInstance: {fileID: 6563078767589435639}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6651053842496437194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3899,10 +3909,6 @@ PrefabInstance:
     - target: {fileID: 7292381573798063549, guid: 0ea8269de88d7434790670ac12f52a9a, type: 3}
       propertyPath: m_Name
       value: Devil
-      objectReference: {fileID: 0}
-    - target: {fileID: 8322100598798899676, guid: 0ea8269de88d7434790670ac12f52a9a, type: 3}
-      propertyPath: obstacleStumbleLayer.m_Bits
-      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
