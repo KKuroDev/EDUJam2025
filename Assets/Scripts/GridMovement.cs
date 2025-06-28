@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class GridMovement : MonoBehaviour
 {
+    public OtherGridMovement devilPlayer;
     // Allows you to hold down a key for movement.
     [SerializeField] private bool isRepeatedMovement = false;
     // Time in seconds to move between one grid position and the next.
@@ -13,6 +14,9 @@ public class GridMovement : MonoBehaviour
     [SerializeField] private LayerMask obstacleLayer;
     [SerializeField] private LayerMask obstacleStumbleLayer;
     private bool isMoving = false;
+    private void Start()
+    {
+    }
 
     // Update is called once per frame
     private void Update()
@@ -73,7 +77,12 @@ public class GridMovement : MonoBehaviour
         if (Physics.CheckBox(endPosition, Vector3.one * 0.4f, Quaternion.identity, obstacleStumbleLayer))
         {
             isMoving = false;
-            // TODO: IMPLEMENT STUMBLE MECHANIC
+            if (devilPlayer != null)
+            {
+                Debug.Log("Test");
+                devilPlayer.CancelNextMove();
+
+            }
             yield break;
         }
         // Smoothly move in the desired direction taking the required time.
