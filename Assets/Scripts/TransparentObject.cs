@@ -23,7 +23,7 @@ public class TransparentObject : MonoBehaviour
 
     private bool IsPlayerNear()
     {
-        GameObject player = GameObject.FindWithTag("Devil");
+        GameObject player = GameObject.FindWithTag("Angel");
         float distance = Vector3.Distance(transform.position, player.transform.position);
 
         return (distance < 1.5f && transform.position.y < player.transform.position.y);
