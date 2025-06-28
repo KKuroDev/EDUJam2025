@@ -38,7 +38,6 @@ public class OtherGridMovement : MonoBehaviour
                 inputFunction = Input.GetKeyDown;
             }
 
-            // Richtung bestimmen und ggf. spiegeln
             if (inputFunction(KeyCode.UpArrow) || inputFunction(KeyCode.W))
                 StartCoroutine(Move(mirrorMovement ? Vector2.down : Vector2.up));
             else if (inputFunction(KeyCode.DownArrow) || inputFunction(KeyCode.S))
