@@ -4,7 +4,8 @@ using UnityEngine;
 // Enum defining possible actions the object can perform when triggered.
 public enum ObjAction
 {
-    OpenDoor,
+    OpenDoorUp,
+    OpenDoorDown,
     MoveUp,
     MoveDown,
     MoveRight,
@@ -52,8 +53,16 @@ public class ObjectAction : MonoBehaviour
         // Only move if this object was the one targeted by the pressure plate.
         if (pressureTarget == null || pressureTarget != transform) return;
 
-        // Simulate door opening by moving it downward over time.
-        transform.localPosition -= new Vector3(0, 1, 1) * doorMoveSpeed * Time.deltaTime;
+        if (action == ObjAction.OpenDoorUp)
+        {
+            // Simulate door opening by moving it upward over time.
+            transform.localPosition -= new Vector3(0, 1, 1) * doorMoveSpeed * Time.deltaTime;
+        }
+        else if (action == ObjAction.OpenDoorDown)
+        {
+            // Simulate door opening by moving it downward over time.
+            transform.localPosition += new Vector3(0, 1, 0) * doorMoveSpeed * Time.deltaTime;
+        }
 
         // Stop door animation after a short time.
         StartCoroutine(OpenDoorTimeLapse());
@@ -70,7 +79,10 @@ public class ObjectAction : MonoBehaviour
         // Perform the appropriate action based on the selected enum.
         switch (action)
         {
-            case ObjAction.OpenDoor:
+            case ObjAction.OpenDoorUp:
+                IsDoorAnimFinish = true;
+                break;
+            case ObjAction.OpenDoorDown:
                 IsDoorAnimFinish = true;
                 break;
             case ObjAction.MoveUp:

@@ -1,4 +1,6 @@
 using System;
+using TMPro;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
@@ -9,6 +11,8 @@ public class PressurePlate : MonoBehaviour
     // The object that should respond to this pressure plate.
     [SerializeField] private Transform target;
 
+    [SerializeField] private string tagToCompare;
+
     // Flag to ensure the plate is only activated once.
     [SerializeField] private bool IsActivated;
 
@@ -16,7 +20,7 @@ public class PressurePlate : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Only respond to objects tagged "Player" and only once.
-        if (other.gameObject.CompareTag("Player") && !IsActivated)
+        if (other.gameObject.CompareTag(tagToCompare) && !IsActivated)
         {
             IsActivated = true;
 
