@@ -5,6 +5,7 @@ public class TransparentObject : MonoBehaviour
     public float fadeSpeed = 2f;
     private Material material;
     private bool isPlayerNear = false;
+    private bool areAnyDevilsNear = false;
 
     private void Start()
     {
@@ -14,8 +15,10 @@ public class TransparentObject : MonoBehaviour
     private void Update()
     {
         isPlayerNear = IsPlayerNear();
+        areAnyDevilsNear = AreAnyDevilsNear();
 
-        if (isPlayerNear)
+
+        if (isPlayerNear || areAnyDevilsNear)
             FadeOut();
         else
             FadeIn();
@@ -27,6 +30,21 @@ public class TransparentObject : MonoBehaviour
         float distance = Vector3.Distance(transform.position, player.transform.position);
 
         return (distance < 1.5f && transform.position.y < player.transform.position.y);
+    }
+    
+    private bool AreAnyDevilsNear()
+    {
+        GameObject[] devils = GameObject.FindGameObjectsWithTag("Devil");
+
+        foreach (GameObject devil in devils)
+        {
+            float distance = Vector3.Distance(transform.position, devil.transform.position);
+
+            if (distance < 1.5f && transform.position.y < devil.transform.position.y)
+                return true;
+        }
+
+        return false;
     }
 
     private void FadeOut()
