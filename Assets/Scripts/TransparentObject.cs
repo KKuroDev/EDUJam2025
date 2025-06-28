@@ -4,13 +4,11 @@ public class TransparentObject : MonoBehaviour
 {
     public float fadeSpeed = 2f;
     private Material material;
-    private Color originalColor;
     private bool isPlayerNear = false;
 
     private void Start()
     {
         material = GetComponent<Renderer>().material;
-        originalColor = material.color;
     }
 
     private void Update()
@@ -42,8 +40,9 @@ public class TransparentObject : MonoBehaviour
 
     private void FadeIn()
     {
-        Color targetColor = originalColor;
+        Color targetColor = material.color;
         targetColor.a = Mathf.Lerp(targetColor.a, 1f, fadeSpeed * Time.deltaTime);
         material.color = targetColor;
+        GetComponent<Renderer>().material.color = material.color;
     }
 }
