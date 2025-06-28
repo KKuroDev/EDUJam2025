@@ -7,6 +7,12 @@ public class Sceneloader : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void ReloadCurrentScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void ExitGame()
     {
         #if UNITY_EDITOR
