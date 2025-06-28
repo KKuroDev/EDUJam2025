@@ -6,7 +6,8 @@ public class UI_LevelComplete : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Devil"))
+        Debug.Log("Trigger");
+        if (other.gameObject.CompareTag("Angel"))
             levelCompletePanel.SetActive(true);
     }
 }
