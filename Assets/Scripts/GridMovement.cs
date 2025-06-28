@@ -34,19 +34,19 @@ public class GridMovement : MonoBehaviour
             }
 
             // If the input function is active, move in the appropriate direction.
-            if (inputFunction(KeyCode.UpArrow))
+            if (inputFunction(KeyCode.UpArrow) || inputFunction(KeyCode.W))
             {
                 StartCoroutine(Move(Vector2.up));
             }
-            else if (inputFunction(KeyCode.DownArrow))
+            else if (inputFunction(KeyCode.DownArrow) || inputFunction(KeyCode.S))
             {
                 StartCoroutine(Move(Vector2.down));
             }
-            else if (inputFunction(KeyCode.LeftArrow))
+            else if (inputFunction(KeyCode.LeftArrow) || inputFunction(KeyCode.A))
             {
                 StartCoroutine(Move(Vector2.left));
             }
-            else if (inputFunction(KeyCode.RightArrow))
+            else if (inputFunction(KeyCode.RightArrow) || inputFunction(KeyCode.D))
             {
                 StartCoroutine(Move(Vector2.right));
             }

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class OtherGridMovement : MonoBehaviour
 {
@@ -37,13 +38,14 @@ public class OtherGridMovement : MonoBehaviour
                 inputFunction = Input.GetKeyDown;
             }
 
-            if (inputFunction(KeyCode.UpArrow))
+            // Richtung bestimmen und ggf. spiegeln
+            if (inputFunction(KeyCode.UpArrow) || inputFunction(KeyCode.W))
                 StartCoroutine(Move(mirrorMovement ? Vector2.down : Vector2.up));
-            else if (inputFunction(KeyCode.DownArrow))
+            else if (inputFunction(KeyCode.DownArrow) || inputFunction(KeyCode.S))
                 StartCoroutine(Move(mirrorMovement ? Vector2.up : Vector2.down));
-            else if (inputFunction(KeyCode.LeftArrow))
+            else if (inputFunction(KeyCode.LeftArrow) || inputFunction(KeyCode.A))
                 StartCoroutine(Move(mirrorMovement ? Vector2.right : Vector2.left));
-            else if (inputFunction(KeyCode.RightArrow))
+            else if (inputFunction(KeyCode.RightArrow) || inputFunction(KeyCode.D))
                 StartCoroutine(Move(mirrorMovement ? Vector2.left : Vector2.right));
         }
     }
@@ -71,6 +73,17 @@ public class OtherGridMovement : MonoBehaviour
             // TODO: IMPLEMENT STUMBLE MECHANIC
             yield break;
         }
+
+        Collider[] hitColliders = Physics.OverlapBox(endPosition, Vector3.one * 0.4f);
+        foreach (var hit in hitColliders)
+        {
+            if (hit.CompareTag("Angel"))
+            {
+                SceneManager.LoadScene("main_menu");
+                yield break;
+            }
+        }
+
         // Smoothly move in the desired direction taking the required time.
         float elapsedTime = 0;
         while (elapsedTime < moveDuration)
@@ -83,6 +96,16 @@ public class OtherGridMovement : MonoBehaviour
 
         // Make sure we end up exactly where we want.
         transform.position = endPosition;
+
+        Collider[] overlapNow = Physics.OverlapBox(transform.position, Vector3.one * 0.4f);
+        foreach (var hit in overlapNow)
+        {
+            if (hit.CompareTag("Angel"))
+            {
+                SceneManager.LoadScene("main_menu");
+                yield break;
+            }
+        }
 
         // We're no longer moving so we can accept another move input.
         isMoving = false;
