@@ -1,6 +1,4 @@
 using System;
-using TMPro;
-using UnityEditor.UIElements;
 using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
