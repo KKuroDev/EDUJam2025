@@ -3546,6 +3546,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Level_10
       objectReference: {fileID: 0}
+    - target: {fileID: 4629206481875605730, guid: 6a5d9be23b58d8e4b980f2fbb6cc1437, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level_10
+      objectReference: {fileID: 0}
     - target: {fileID: 6310191719033082874, guid: 6a5d9be23b58d8e4b980f2fbb6cc1437, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.023399
