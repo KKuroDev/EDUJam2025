@@ -25,8 +25,11 @@ public class PressurePlate : MonoBehaviour
             // Trigger any subscribed object's action with the target.
             OnActionDone?.Invoke(target);
 
-            // Visually press down the plate.
-            transform.position += new Vector3(0, 0, 0.25f);
+            if (gameObject.name != "LevelComplete")
+            {
+                // Visually press down the plate.
+                transform.position += new Vector3(0, 0, 0.25f);
+            }
         }
     }
 }
