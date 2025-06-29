@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class OtherGridMovement : MonoBehaviour
 {
-    
+    [SerializeField] private GameObject gameOverPanel;
 
     // Allows you to hold down a key for movement.
     [SerializeField] private bool isRepeatedMovement = false;
@@ -90,7 +90,8 @@ public class OtherGridMovement : MonoBehaviour
         {
             if (hit.CompareTag("Angel"))
             {
-                SceneManager.LoadScene("main_menu");
+                GameObject.FindWithTag("Angel").gameObject.GetComponent<GridMovement>().CanMove = false;
+                gameOverPanel.SetActive(true);
                 yield break;
             }
         }
@@ -115,7 +116,7 @@ public class OtherGridMovement : MonoBehaviour
         {
             if (hit.CompareTag("Angel"))
             {
-                SceneManager.LoadScene("main_menu");
+                //SceneManager.LoadScene("main_menu");
                 yield break;
             }
         }

@@ -15,46 +15,53 @@ public class GridMovement : MonoBehaviour
     [SerializeField] private LayerMask obstacleLayer;
     [SerializeField] private LayerMask obstacleStumbleLayer;
     private bool isMoving = false;
+
+    public bool CanMove { get; set; }
+    
     private void Start()
     {
+        CanMove = true;
         AudioManager.instance.PlayMusic();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        // Only process on move at a time.
-        if (!isMoving)
+        if (CanMove)
         {
-            // Accomodate two different types of moving.
-            System.Func<KeyCode, bool> inputFunction;
-            if (isRepeatedMovement)
+            // Only process on move at a time.
+            if (!isMoving)
             {
-                // GetKey repeatedly fires.
-                inputFunction = Input.GetKey;
-            }
-            else
-            {
-                // GetKeyDown fires once per keypress
-                inputFunction = Input.GetKeyDown;
-            }
+                // Accomodate two different types of moving.
+                System.Func<KeyCode, bool> inputFunction;
+                if (isRepeatedMovement)
+                {
+                    // GetKey repeatedly fires.
+                    inputFunction = Input.GetKey;
+                }
+                else
+                {
+                    // GetKeyDown fires once per keypress
+                    inputFunction = Input.GetKeyDown;
+                }
 
-            // If the input function is active, move in the appropriate direction.
-            if (inputFunction(KeyCode.UpArrow) || inputFunction(KeyCode.W))
-            {
-                StartCoroutine(Move(Vector2.up));
-            }
-            else if (inputFunction(KeyCode.DownArrow) || inputFunction(KeyCode.S))
-            {
-                StartCoroutine(Move(Vector2.down));
-            }
-            else if (inputFunction(KeyCode.LeftArrow) || inputFunction(KeyCode.A))
-            {
-                StartCoroutine(Move(Vector2.left));
-            }
-            else if (inputFunction(KeyCode.RightArrow) || inputFunction(KeyCode.D))
-            {
-                StartCoroutine(Move(Vector2.right));
+                // If the input function is active, move in the appropriate direction.
+                if (inputFunction(KeyCode.UpArrow) || inputFunction(KeyCode.W))
+                {
+                    StartCoroutine(Move(Vector2.up));
+                }
+                else if (inputFunction(KeyCode.DownArrow) || inputFunction(KeyCode.S))
+                {
+                    StartCoroutine(Move(Vector2.down));
+                }
+                else if (inputFunction(KeyCode.LeftArrow) || inputFunction(KeyCode.A))
+                {
+                    StartCoroutine(Move(Vector2.left));
+                }
+                else if (inputFunction(KeyCode.RightArrow) || inputFunction(KeyCode.D))
+                {
+                    StartCoroutine(Move(Vector2.right));
+                }
             }
         }
     }

@@ -2559,6 +2559,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7040737764348098227, guid: 2eac6b2526d0ea24e85e82e5171442bf, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 1619679914}
     - target: {fileID: 8644674534706397906, guid: 2eac6b2526d0ea24e85e82e5171442bf, type: 3}
       propertyPath: m_Name
       value: Devil Same Variant
@@ -3684,6 +3688,11 @@ RectTransform:
 --- !u!1 &1619679913 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3429383826900214073, guid: 6a5d9be23b58d8e4b980f2fbb6cc1437, type: 3}
+  m_PrefabInstance: {fileID: 1619679911}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1619679914 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 187430904617831065, guid: 6a5d9be23b58d8e4b980f2fbb6cc1437, type: 3}
   m_PrefabInstance: {fileID: 1619679911}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1642531021 stripped

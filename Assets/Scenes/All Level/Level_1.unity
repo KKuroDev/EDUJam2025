@@ -812,6 +812,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a5d9be23b58d8e4b980f2fbb6cc1437, type: 3}
+--- !u!1 &363907273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 187430904617831065, guid: 6a5d9be23b58d8e4b980f2fbb6cc1437, type: 3}
+  m_PrefabInstance: {fileID: 363907272}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1006,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Devil
       objectReference: {fileID: 0}
+    - target: {fileID: 8322100598798899676, guid: 0ea8269de88d7434790670ac12f52a9a, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 363907273}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

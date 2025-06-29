@@ -719,6 +719,10 @@ PrefabInstance:
       value: Devil
       objectReference: {fileID: 0}
     - target: {fileID: 8322100598798899676, guid: 0ea8269de88d7434790670ac12f52a9a, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 1631728101}
+    - target: {fileID: 8322100598798899676, guid: 0ea8269de88d7434790670ac12f52a9a, type: 3}
       propertyPath: mirrorMovement
       value: 0
       objectReference: {fileID: 0}
@@ -2029,6 +2033,11 @@ RectTransform:
 --- !u!1 &1631728100 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3429383826900214073, guid: 6a5d9be23b58d8e4b980f2fbb6cc1437, type: 3}
+  m_PrefabInstance: {fileID: 1631728098}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1631728101 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 187430904617831065, guid: 6a5d9be23b58d8e4b980f2fbb6cc1437, type: 3}
   m_PrefabInstance: {fileID: 1631728098}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1663348640
