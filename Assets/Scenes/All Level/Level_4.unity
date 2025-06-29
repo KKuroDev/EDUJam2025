@@ -181,7 +181,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4446526861369533131, guid: 91961be03d5911245a274d311fb334fd, type: 3}
   m_PrefabInstance: {fileID: 76583565}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &125125016
+--- !u!1001 &104298603
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -198,16 +198,28 @@ PrefabInstance:
       value: 0.49019608
       objectReference: {fileID: 0}
     - target: {fileID: 4052065479849036796, guid: 2c7b3d44668aa6b48bd602bbb56de3de, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.074875556
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052065479849036796, guid: 2c7b3d44668aa6b48bd602bbb56de3de, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.074875556
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052065479849036796, guid: 2c7b3d44668aa6b48bd602bbb56de3de, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.074875556
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052065479849036796, guid: 2c7b3d44668aa6b48bd602bbb56de3de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.65509075
+      value: 1.66
       objectReference: {fileID: 0}
     - target: {fileID: 4052065479849036796, guid: 2c7b3d44668aa6b48bd602bbb56de3de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 47.199997
+      value: -1.57
       objectReference: {fileID: 0}
     - target: {fileID: 4052065479849036796, guid: 2c7b3d44668aa6b48bd602bbb56de3de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 98
+      value: 3.21
       objectReference: {fileID: 0}
     - target: {fileID: 4052065479849036796, guid: 2c7b3d44668aa6b48bd602bbb56de3de, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5454,7 +5466,6 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1335367528}
   - {fileID: 789988717}
-  - {fileID: 125125016}
   - {fileID: 1862613318}
   - {fileID: 422754762}
   - {fileID: 504775838}
@@ -5462,3 +5473,4 @@ SceneRoots:
   - {fileID: 637134627}
   - {fileID: 770045768}
   - {fileID: 1776720486}
+  - {fileID: 104298603}
