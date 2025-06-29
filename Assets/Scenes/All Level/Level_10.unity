@@ -2245,32 +2245,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4446526861369533131, guid: 91961be03d5911245a274d311fb334fd, type: 3}
   m_PrefabInstance: {fileID: 894661834}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &717033416 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2559432704498371167, guid: a0666e387e4abbf42bcf90e9b68ada64, type: 3}
-  m_PrefabInstance: {fileID: 523049530080374006}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &717033417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7783961592156174649, guid: a0666e387e4abbf42bcf90e9b68ada64, type: 3}
   m_PrefabInstance: {fileID: 523049530080374006}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &717033418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717033416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 057c8f0b20f241045849ac2af3399cf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action: 1
-  moveDuration: 2.5
-  doorMoveSpeed: 3
-  IsDoorAnimFinish: 0
 --- !u!4 &741179407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4446526861369533131, guid: 91961be03d5911245a274d311fb334fd, type: 3}
@@ -5367,32 +5346,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23d0ac0248e3c4647b58dedae724c96f, type: 3}
---- !u!1 &1891114484 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 795432786243851369, guid: 6daf5ca2999a1314385c75f46ea30c24, type: 3}
-  m_PrefabInstance: {fileID: 4839898151132035115}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1891114485 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1103818989999433316, guid: 6daf5ca2999a1314385c75f46ea30c24, type: 3}
   m_PrefabInstance: {fileID: 4839898151132035115}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1891114486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891114484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 057c8f0b20f241045849ac2af3399cf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action: 1
-  moveDuration: 2.5
-  doorMoveSpeed: 3
-  IsDoorAnimFinish: 0
 --- !u!4 &1912821565 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1133727065683819583, guid: 85953a630933a56429aecc5fafa61a5d, type: 3}
@@ -5966,10 +5924,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2559432704498371167, guid: a0666e387e4abbf42bcf90e9b68ada64, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 717033418}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0666e387e4abbf42bcf90e9b68ada64, type: 3}
 --- !u!1001 &829301707801447151
 PrefabInstance:
@@ -6098,10 +6053,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 795432786243851369, guid: 6daf5ca2999a1314385c75f46ea30c24, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1891114486}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6daf5ca2999a1314385c75f46ea30c24, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
