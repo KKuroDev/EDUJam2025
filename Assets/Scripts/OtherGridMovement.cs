@@ -42,13 +42,13 @@ public class OtherGridMovement : MonoBehaviour
             }
 
             if (inputFunction(KeyCode.UpArrow) || inputFunction(KeyCode.W))
-                Invoke("MoveUp", 0.0001f);
+                Invoke("MoveUp", 0.01f);
             else if (inputFunction(KeyCode.DownArrow) || inputFunction(KeyCode.S))
-                Invoke("MoveDown", 0.0001f);
+                Invoke("MoveDown", 0.01f);
             else if (inputFunction(KeyCode.LeftArrow) || inputFunction(KeyCode.A))
-                Invoke("MoveLeft", 0.0001f);
+                Invoke("MoveLeft", 0.01f);
             else if (inputFunction(KeyCode.RightArrow) || inputFunction(KeyCode.D))
-                Invoke("MoveRight", 0.0001f);
+                Invoke("MoveRight", 0.01f);
         }
     }
 
@@ -62,6 +62,10 @@ public class OtherGridMovement : MonoBehaviour
         }
         // Record that we're moving so we don't accept more input.
         isMoving = true;
+
+        float targetAngle = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg - 90f;
+        Quaternion startRotation = transform.rotation;
+        Quaternion targetRotation = Quaternion.Euler(0, 0, targetAngle);
 
         // Make a note of where we are and where we are going.
         Vector2 startPosition = transform.position;
@@ -98,6 +102,8 @@ public class OtherGridMovement : MonoBehaviour
             elapsedTime += Time.deltaTime;
             float percent = elapsedTime / moveDuration;
             transform.position = Vector2.Lerp(startPosition, endPosition, percent);
+            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, percent);
+
             yield return null;
         }
 

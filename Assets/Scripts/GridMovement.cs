@@ -68,8 +68,13 @@ public class GridMovement : MonoBehaviour
         Vector2 startPosition = transform.position;
         Vector2 endPosition = startPosition + (direction * gridSize);
 
+        // Set rotation to face movement direction
+        float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+        Quaternion startRotation = transform.rotation;
+        Quaternion targetRotation = Quaternion.Euler(0, 0, targetAngle);
+
         // Check if obstacle is in Moved Direction
-        if( Physics.CheckBox(endPosition, Vector3.one * 0.4f, Quaternion.identity, obstacleLayer))
+        if ( Physics.CheckBox(endPosition, Vector3.one * 0.4f, Quaternion.identity, obstacleLayer))
         {
             isMoving = false;
             yield break;
@@ -97,6 +102,7 @@ public class GridMovement : MonoBehaviour
             elapsedTime += Time.deltaTime;
             float percent = elapsedTime / moveDuration;
             transform.position = Vector2.Lerp(startPosition, endPosition, percent);
+            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, percent);
             yield return null;
         }
 
