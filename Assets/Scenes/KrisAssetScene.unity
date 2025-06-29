@@ -6281,6 +6281,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1327561338
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4776343336171402019, guid: 9adc86e3a860015478e398a5038a14a0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 149623.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776343336171402019, guid: 9adc86e3a860015478e398a5038a14a0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2821.3857
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776343336171402019, guid: 9adc86e3a860015478e398a5038a14a0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 101202.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776343336171402019, guid: 9adc86e3a860015478e398a5038a14a0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776343336171402019, guid: 9adc86e3a860015478e398a5038a14a0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776343336171402019, guid: 9adc86e3a860015478e398a5038a14a0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776343336171402019, guid: 9adc86e3a860015478e398a5038a14a0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776343336171402019, guid: 9adc86e3a860015478e398a5038a14a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776343336171402019, guid: 9adc86e3a860015478e398a5038a14a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776343336171402019, guid: 9adc86e3a860015478e398a5038a14a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261095355188816281, guid: 9adc86e3a860015478e398a5038a14a0, type: 3}
+      propertyPath: m_Name
+      value: hell_door
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9adc86e3a860015478e398a5038a14a0, type: 3}
 --- !u!1 &1347490789
 GameObject:
   m_ObjectHideFlags: 0
@@ -10251,3 +10308,4 @@ SceneRoots:
   - {fileID: 1303124056}
   - {fileID: 616861698}
   - {fileID: 1219044889}
+  - {fileID: 1327561338}
