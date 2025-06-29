@@ -157,10 +157,10 @@ MonoBehaviour:
   gridSize: 1
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
   obstacleStumbleLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 64
 --- !u!114 &5276836722212384372
 MonoBehaviour:
   m_ObjectHideFlags: 0
