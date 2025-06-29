@@ -98,7 +98,7 @@ public class OtherGridMovement : MonoBehaviour
         // Make sure we end up exactly where we want.
         transform.position = endPosition;
 
-        GameObject angel = GameObject.FindWithTag("Angel");
+        /*GameObject angel = GameObject.FindWithTag("Angel");
         if (angel != null)
         {
             if (Vector2.Distance(transform.position, angel.transform.position) < 0.1f)
@@ -106,7 +106,7 @@ public class OtherGridMovement : MonoBehaviour
                 SceneManager.LoadScene("main_menu");
                 yield break;
             }
-        }
+        }*/
         // We're no longer moving so we can accept another move input.
         isMoving = false;
     }
