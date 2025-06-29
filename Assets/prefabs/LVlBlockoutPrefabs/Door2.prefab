@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   action: 0
-  moveDuration: 3
+  moveDuration: 7
   doorMoveSpeed: 3
   IsDoorAnimFinish: 0
 --- !u!1001 &2221350177823800350
