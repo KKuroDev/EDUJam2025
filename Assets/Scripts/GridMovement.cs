@@ -17,6 +17,7 @@ public class GridMovement : MonoBehaviour
     private bool isMoving = false;
     private void Start()
     {
+        AudioManager.instance.PlayMusic();
     }
 
     // Update is called once per frame

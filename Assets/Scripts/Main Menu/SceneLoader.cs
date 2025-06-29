@@ -7,6 +7,9 @@ public class Sceneloader : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
         gameObject.SetActive(false);
+
+        if (sceneName == "Main_Menu")
+            AudioManager.instance.StopMusic();
     }
 
     public void ReloadCurrentScene()
