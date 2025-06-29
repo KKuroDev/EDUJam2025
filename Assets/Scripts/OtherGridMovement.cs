@@ -4,8 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class OtherGridMovement : MonoBehaviour
 {
-    [SerializeField] private GameObject gameOverPanel;
-
     // Allows you to hold down a key for movement.
     [SerializeField] private bool isRepeatedMovement = false;
     // Time in seconds to move between one grid position and the next.
@@ -85,17 +83,6 @@ public class OtherGridMovement : MonoBehaviour
             yield break;
         }
 
-        Collider[] hitColliders = Physics.OverlapBox(endPosition, Vector3.one * 0.4f);
-        foreach (var hit in hitColliders)
-        {
-            if (hit.CompareTag("Angel"))
-            {
-                GameObject.FindWithTag("Angel").gameObject.GetComponent<GridMovement>().CanMove = false;
-                gameOverPanel.SetActive(true);
-                yield break;
-            }
-        }
-
         // Smoothly move in the desired direction taking the required time.
         float elapsedTime = 0;
         while (elapsedTime < moveDuration)
@@ -110,16 +97,6 @@ public class OtherGridMovement : MonoBehaviour
 
         // Make sure we end up exactly where we want.
         transform.position = endPosition;
-
-        Collider[] overlapNow = Physics.OverlapBox(transform.position, Vector3.one * 0.4f);
-        foreach (var hit in overlapNow)
-        {
-            if (hit.CompareTag("Angel"))
-            {
-                //SceneManager.LoadScene("main_menu");
-                yield break;
-            }
-        }
 
         // We're no longer moving so we can accept another move input.
         isMoving = false;
@@ -151,5 +128,6 @@ public class OtherGridMovement : MonoBehaviour
     {
         StartCoroutine(Move(mirrorMovement ? Vector2.left : Vector2.right));
     }
+
     private bool cancelNextMove = false;
 }

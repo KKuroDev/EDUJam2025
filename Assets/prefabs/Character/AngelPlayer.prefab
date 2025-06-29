@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 270340790239869705}
   - component: {fileID: 8968480671473984042}
   - component: {fileID: 5193797133331629269}
+  - component: {fileID: 5276836722212384372}
   m_Layer: 0
   m_Name: AngelPlayer
   m_TagString: Angel
@@ -150,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af50146636ea246439e828a53b667a5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  devilPlayer: {fileID: 0}
+  devilPlayers: []
   isRepeatedMovement: 0
   moveDuration: 0.1
   gridSize: 1
@@ -160,6 +161,22 @@ MonoBehaviour:
   obstacleStumbleLayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &5276836722212384372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2702081909067527140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 057c8f0b20f241045849ac2af3399cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: 0
+  moveDuration: 5
+  doorMoveSpeed: 2
+  IsDoorAnimFinish: 0
 --- !u!1001 &4654513982109492549
 PrefabInstance:
   m_ObjectHideFlags: 0
