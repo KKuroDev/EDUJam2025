@@ -425,6 +425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Demon01_Mesh_Finished
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74e42a2456566d146a4567dbbeacf18f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1696886118759963360, guid: 74e42a2456566d146a4567dbbeacf18f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 43.103333
