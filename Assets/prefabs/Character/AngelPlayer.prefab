@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af50146636ea246439e828a53b667a5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  devilPlayer: {fileID: 0}
+  devilPlayers: []
   isRepeatedMovement: 0
   moveDuration: 0.1
   gridSize: 1
@@ -235,10 +235,40 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d0854330a2d881f46b41a29fcf5deeca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5801422839779416448}
   m_SourcePrefab: {fileID: 100100000, guid: d0854330a2d881f46b41a29fcf5deeca, type: 3}
 --- !u!4 &5121330218564633262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d0854330a2d881f46b41a29fcf5deeca, type: 3}
   m_PrefabInstance: {fileID: 4654513982109492549}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5501514318043453460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d0854330a2d881f46b41a29fcf5deeca, type: 3}
+  m_PrefabInstance: {fileID: 4654513982109492549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5801422839779416448
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5501514318043453460}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05c68d8e5c9ea224f816e6ee9d6bfc44, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
