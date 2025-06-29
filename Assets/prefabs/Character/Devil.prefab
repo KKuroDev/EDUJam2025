@@ -218,16 +218,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c423c8524d84e4fb3dbe2736693a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverPanel: {fileID: 0}
   isRepeatedMovement: 0
   moveDuration: 0.1
   gridSize: 1
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
   obstacleStumbleLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 64
   mirrorMovement: 1
 --- !u!1001 &3554174986873952130
 PrefabInstance:
