@@ -257,6 +257,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ea8269de88d7434790670ac12f52a9a, type: 3}
+--- !u!114 &3019506 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8322100598798899676, guid: 0ea8269de88d7434790670ac12f52a9a, type: 3}
+  m_PrefabInstance: {fileID: 3019505}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8c423c8524d84e4fb3dbe2736693a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &102665607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3857,6 +3868,18 @@ PrefabInstance:
       propertyPath: obstacleLayer.m_Bits
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5193797133331629269, guid: 6693e7563dbb252479ef978cb058291b, type: 3}
+      propertyPath: devilPlayers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193797133331629269, guid: 6693e7563dbb252479ef978cb058291b, type: 3}
+      propertyPath: 'devilPlayers.Array.data[0]'
+      value: 
+      objectReference: {fileID: 107669262}
+    - target: {fileID: 5193797133331629269, guid: 6693e7563dbb252479ef978cb058291b, type: 3}
+      propertyPath: 'devilPlayers.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3019506}
     - target: {fileID: 5193797133331629269, guid: 6693e7563dbb252479ef978cb058291b, type: 3}
       propertyPath: obstacleStumbleLayer.m_Bits
       value: 64
