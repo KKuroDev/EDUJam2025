@@ -35,6 +35,11 @@ public class AudioManager : MonoBehaviour
         };
     }
 
+    private void Start()
+    {
+        AudioManager.instance.PlayMusic();
+    }
+
     public void PlayMusic()
     {
         if (!musicAudioSource.isPlaying)

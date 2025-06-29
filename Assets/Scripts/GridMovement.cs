@@ -21,7 +21,6 @@ public class GridMovement : MonoBehaviour
     private void Start()
     {
         CanMove = true;
-        AudioManager.instance.PlayMusic();
     }
 
     // Update is called once per frame
