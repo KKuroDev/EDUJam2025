@@ -16,12 +16,11 @@ public class UI_LevelComplete : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger");
         if (other.gameObject.CompareTag("Angel"))
         {
-            levelCompletePanel.SetActive(true);
             string levelNumber = SceneManager.GetActiveScene().name.Replace("Level_", "");
             OnLevelUnlocked?.Invoke(int.Parse(levelNumber));
+            StartCoroutine(LoadPanel());
         }
     }
 
@@ -29,5 +28,11 @@ public class UI_LevelComplete : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(1f);
         GameObject.Find("GameManager").gameObject.transform.Find("LevelManager").gameObject.SetActive(true);
+    }
+
+    private IEnumerator LoadPanel()
+    {
+        yield return new WaitForSecondsRealtime(1.75f);
+        levelCompletePanel.SetActive(true);
     }
 }
