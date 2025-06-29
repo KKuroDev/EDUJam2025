@@ -749,7 +749,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level_1
+          m_StringArgument: Level_4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &220867882
@@ -1018,7 +1018,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level_1
+          m_StringArgument: Level_2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &263059132
@@ -1324,7 +1324,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level_1
+          m_StringArgument: Level_6
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &418144297
@@ -2155,7 +2155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &676064433
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2900,7 +2900,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level_1
+          m_StringArgument: Level_3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1097356411
@@ -3033,7 +3033,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level_1
+          m_StringArgument: Level_8
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1177986722
@@ -3467,7 +3467,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level_1
+          m_StringArgument: Level_7
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1266939038
@@ -3798,7 +3798,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1317481463
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4547,7 +4547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1544260580
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4829,7 +4829,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level_1
+          m_StringArgument: Level_10
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1567220854
@@ -5217,7 +5217,7 @@ GameObject:
   - component: {fileID: 1667991325}
   m_Layer: 0
   m_Name: LevelManager
-  m_TagString: Untagged
+  m_TagString: LevelManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5230,12 +5230,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667991321}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 686.405, y: 500.1289, z: -5.6455045}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 284.4045, y: 271.12357, z: 13.188786}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1847662867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1667991325
 MonoBehaviour:
@@ -5669,6 +5669,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800790454}
   m_CullTransparentMesh: 1
+--- !u!1 &1847662866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1847662867}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1847662867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847662866}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 402.00052, y: 229.00534, z: -18.83429}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1667991324}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1949237382
 GameObject:
   m_ObjectHideFlags: 0
@@ -5761,7 +5793,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level_1
+          m_StringArgument: Level_5
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1949237385
@@ -6305,7 +6337,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level_1
+          m_StringArgument: Level_9
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2070856181
@@ -6487,4 +6519,4 @@ SceneRoots:
   - {fileID: 1642995004}
   - {fileID: 505143945}
   - {fileID: 557667819}
-  - {fileID: 1667991324}
+  - {fileID: 1847662867}
